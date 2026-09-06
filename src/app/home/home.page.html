@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mi App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- 1) Ítems clickeables: button = se ven "tocables", detail = flecha ">" -->
+  <ion-list>
+    <ion-list-header>Ítems clickeables</ion-list-header>
+
+    <ion-item button="true" detail="true">
+      <ion-icon name="home" slot="start"></ion-icon>
+      <ion-label>Inicio</ion-label>
+    </ion-item>
+    <ion-item button="true" detail="true">
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-item>
+    <ion-item button="true" detail="true">
+      <ion-icon name="chatbubbles" slot="start"></ion-icon>
+      <ion-label>Mensajes</ion-label>
+    </ion-item>
+    <ion-item button="true" detail="true" lines="none">
+      <ion-icon name="settings" slot="start"></ion-icon>
+      <ion-label>Ajustes</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- 2) Avatar (foto redonda) y thumbnail (imagen cuadrada) en slot="start" -->
+  <ion-list>
+    <ion-list-header>Con avatar / thumbnail</ion-list-header>
+
+    <ion-item button="true" detail="true">
+      <ion-avatar slot="start">
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Ada Lovelace</h2>
+        <p>En línea</p>
+      </ion-label>
+    </ion-item>
+    <ion-item button="true" detail="true">
+      <ion-avatar slot="start">
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Alan Turing</h2>
+        <p>Última vez hace 2 h</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="producto" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Producto destacado</h2>
+        <p>$ 9.990</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- 3) Deslizables: arrastrar el ítem revela acciones (el gesto es solo markup) -->
+  <ion-list>
+    <ion-list-header>Deslizables (swipe)</ion-list-header>
+
+    <ion-item-sliding>
+      <!-- Opciones que aparecen al deslizar hacia la DERECHA -->
+      <ion-item-options side="start">
+        <ion-item-option color="warning">
+          <ion-icon name="star" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item>
+        <ion-icon name="chatbubbles" slot="start"></ion-icon>
+        <ion-label>Desliza hacia la derecha →</ion-label>
+      </ion-item>
+
+      <!-- Opciones que aparecen al deslizar hacia la IZQUIERDA -->
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item lines="none">
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label>← Desliza hacia la izquierda</ion-label>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="warning">
+          <ion-icon name="star" slot="icon-only"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "clase2-02-lista",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
